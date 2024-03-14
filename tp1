@@ -1,0 +1,28 @@
+(* Le Tp est complet seullement la ligne 18 plante mais tnkt*)
+
+let multiple_of n d =  ((n mod d) = 0) ;;
+
+let integer_square_root n = int_of_float(sqrt( float_of_int n));;
+
+
+let last_character chaine = String.get chaine ( String.length chaine - 1) ;;
+
+let string_of_bool valeur = string_of_bool valeur;;
+
+let pairwise_distinct (a, b, c, d) =
+  a <> b && a <> c && a <> d && b <> c && b <> d && c <> d;;
+
+let e1 : (int * bool) * int = ((5, true), 7);;
+let e2 : ('a -> 'a) * char = ((fun x -> x), 'r');;
+
+let f1: (int * bool) = (10, false);; 
+let f2: ('a -> bool) = (fun camel -> true);; 
+let f3: 'a -> 'a -> int = fun y y -> 2;;
+let f4: 'a * 'b -> 'b * 'a = fun (x, y) -> (y, x);;
+let f5: ('a -> 'b) -> ('a -> 'b -> 'c) -> 'a -> 'c = fun f g x -> g x (f x);;
+let f6 (f1, f2, x) =
+  let y = f1 x in
+  let z = f2 (x, y) in
+  z
+
+  
